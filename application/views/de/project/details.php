@@ -90,7 +90,7 @@ $public = $project->Zugangsklasse == "-1";
             <div class="clear"></div>
         </div>
         
-    <?php if (!empty($project->datei_name)): ?>
+    <?php if (!empty($project->datei_name) && 1==2): ?>
       <div class="content">
             <?php $kb = strlen($project->datei_inhalt)/1024;
             $mb = $kb/1024;

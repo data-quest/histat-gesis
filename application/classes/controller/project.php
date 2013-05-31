@@ -109,6 +109,7 @@ class Controller_Project extends Controller_Data {
     }
 
     public function action_download() {
+         throw new HTTP_Exception_404();
         if (!$this->id)
             throw new HTTP_Exception_404(); //If ID not given throw Exception
 
