@@ -1,4 +1,6 @@
-
+<?php $version_raw =  explode(" ", $project->Bemerkungen);
+$version = $version_raw[count($version_raw)-1];
+?>
 <!--                                            -->
 <!-- The original DDI 3.1 Schema can be found at http://www.ddialliance.org/DDI/schema/ddi3.1/ -->
 <!--                                         -->
@@ -40,16 +42,16 @@
             <r:Module>
                 <r:ID>ZA<?= $project->ZA_Studiennummer ?>_ConCom</r:ID>
                 <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                <r:Version>1.0.0</r:Version>
+                <r:Version><?= $version?></r:Version>
             </r:Module>
             <r:Scheme>
                 <r:ID>ZA<?= $project->ZA_Studiennummer ?>_UniSch</r:ID>
                 <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                <r:Version>1.0.0</r:Version>
+                <r:Version><?= $version?></r:Version>
             </r:Scheme>
             <r:ID>ZA<?= $project->ZA_Studiennummer ?>_Uni</r:ID>
             <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-            <r:Version>1.0.0</r:Version>
+            <r:Version><?= $version?></r:Version>
         </r:UniverseReference>
         <s:Purpose id="ZA<?= $project->ZA_Studiennummer ?>_P"> 
             <r:Content></r:Content>
@@ -93,7 +95,7 @@
                 <r:RelatedToReference>
                     <r:ID>ZA<?= $project->ZA_Studiennummer ?>_SU</r:ID>
                     <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                    <r:Version>1.0.0</r:Version>
+                    <r:Version><?= $version?></r:Version>
                 </r:RelatedToReference>
             </r:Relationship>
             <r:Header>Weitere Hinweise</r:Header>
@@ -117,16 +119,16 @@
                     <r:Module>
                         <r:ID>ZA<?= $project->ZA_Studiennummer ?>_Arc</r:ID>
                         <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                        <r:Version>1.0.0</r:Version>
+                        <r:Version><?= $version?></r:Version>
                     </r:Module>
                     <r:Scheme>
                         <r:ID>ZA<?= $project->ZA_Studiennummer ?>_OrgSch</r:ID>
                         <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                        <r:Version>1.0.0</r:Version>
+                        <r:Version><?= $version?></r:Version>
                     </r:Scheme>
                     <r:ID>ZA<?= $project->ZA_Studiennummer ?>_Org_DC</r:ID>
                     <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                    <r:Version>1.0.0</r:Version>
+                    <r:Version><?= $version?></r:Version>
                 </dc:DataCollectorOrganizationReference>
                 <dc:DataCollectionDate>
                     <?php $years = explode("-", $project->Zeitraum); ?>
@@ -151,16 +153,16 @@
                             <r:Module>
                                 <r:ID>ZA<?= $project->ZA_Studiennummer ?>_SU</r:ID>
                                 <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                                <r:Version>1.0.0</r:Version>
+                                <r:Version><?= $version?></r:Version>
                             </r:Module>
                             <r:Scheme>
                                 <r:ID>ZA<?= $project->ZA_Studiennummer ?>_VarSch</r:ID>
                                 <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                                <r:Version>1.0.0</r:Version>
+                                <r:Version><?= $version?></r:Version>
                             </r:Scheme>
                             <r:ID>ZA<?= $project->ZA_Studiennummer ?>_Var</r:ID>
                             <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                            <r:Version>1.0.0</r:Version>
+                            <r:Version><?= $version?></r:Version>
                         </l:VariableReference>
                     </l:Dimension>
                     <l:Measure id="ZA<?= $project->ZA_Studiennummer ?>_Mea">
@@ -168,16 +170,16 @@
                             <r:Module>
                                 <r:ID>ZA<?= $project->ZA_Studiennummer ?>_SU</r:ID>
                                 <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                                <r:Version>1.0.0</r:Version>
+                                <r:Version><?= $version?></r:Version>
                             </r:Module>
                             <r:Scheme>
                                 <r:ID>ZA<?= $project->ZA_Studiennummer ?>_VarSch</r:ID>
                                 <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                                <r:Version>1.0.0</r:Version>
+                                <r:Version><?= $version?></r:Version>
                             </r:Scheme>
                             <r:ID>ZA<?= $project->ZA_Studiennummer ?>_Var</r:ID>
                             <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                            <r:Version>1.0.0</r:Version>
+                            <r:Version><?= $version?></r:Version>
                         </l:VariableReference>
                     </l:Measure>
                 </l:NCube>
@@ -197,7 +199,7 @@
                     <pd:LogicalProductReference>
                         <r:ID>ZA<?= $project->ZA_Studiennummer ?>_LogPro</r:ID>
                         <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                        <r:Version>1.0.0</r:Version>
+                        <r:Version><?= $version?></r:Version>
                     </pd:LogicalProductReference>
                     <pd:Format>Excel</pd:Format>
                     <pd:GrossRecordStructure id="ZA<?= $project->ZA_Studiennummer ?>_GroRecStr">
@@ -205,16 +207,16 @@
                             <r:Module>
                                 <r:ID>ZA<?= $project->ZA_Studiennummer ?>_LogPro</r:ID>
                                 <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                                <r:Version>1.0.0</r:Version>
+                                <r:Version><?= $version?></r:Version>
                             </r:Module>
                             <r:Scheme>
                                 <r:ID>ZA<?= $project->ZA_Studiennummer ?>_LogPro</r:ID>
                                 <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                                <r:Version>1.0.0</r:Version>
+                                <r:Version><?= $version?></r:Version>
                             </r:Scheme>
                             <r:ID>ZA<?= $project->ZA_Studiennummer ?>_LogRec</r:ID>
                             <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                            <r:Version>1.0.0</r:Version>
+                            <r:Version><?= $version?></r:Version>
                         </pd:LogicalRecordReference>
                         <pd:PhysicalRecordSegment id="ZA<?= $project->ZA_Studiennummer ?>_PhyRecSeg"></pd:PhysicalRecordSegment>
                     </pd:GrossRecordStructure>
@@ -227,16 +229,16 @@
                         <r:Module>
                             <r:ID>ZA<?= $project->ZA_Studiennummer ?>_PhyDatPro</r:ID>
                             <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                            <r:Version>1.0.0</r:Version>
+                            <r:Version><?= $version?></r:Version>
                         </r:Module>
                         <r:Scheme>
                             <r:ID>ZA<?= $project->ZA_Studiennummer ?>_PhyStrSch</r:ID>
                             <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                            <r:Version>1.0.0</r:Version>
+                            <r:Version><?= $version?></r:Version>
                         </r:Scheme>
                         <r:ID>ZA<?= $project->ZA_Studiennummer ?>_PhyStr</r:ID>
                         <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                        <r:Version>1.0.0</r:Version>
+                        <r:Version><?= $version?></r:Version>
                         <!-- Dummy Element - should not be required! -->
                         <pd:PhysicalRecordSegmentUsed>ZA<?= $project->ZA_Studiennummer ?>_PhyRecSeg</pd:PhysicalRecordSegmentUsed>
                     </pd:PhysicalStructureReference>
@@ -247,16 +249,16 @@
                             <r:Module>
                                 <r:ID>ZA<?= $project->ZA_Studiennummer ?>_LogPro</r:ID>
                                 <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                                <r:Version>1.0.0</r:Version>
+                                <r:Version><?= $version?></r:Version>
                             </r:Module>
                             <r:Scheme>
                                 <r:ID>ZA<?= $project->ZA_Studiennummer ?>_LogPro</r:ID>
                                 <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                                <r:Version>1.0.0</r:Version>
+                                <r:Version><?= $version?></r:Version>
                             </r:Scheme>
                             <r:ID>ZA<?= $project->ZA_Studiennummer ?>_LogRec</r:ID>
                             <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                            <r:Version>1.0.0</r:Version>
+                            <r:Version><?= $version?></r:Version>
                         </n1:NCubeReference>
                         <n1:DataItem>
                             <n1:Measure>
@@ -264,16 +266,16 @@
                                     <r:Module>
                                         <r:ID>ZA<?= $project->ZA_Studiennummer ?>_LogPro</r:ID>
                                         <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                                        <r:Version>1.0.0</r:Version>
+                                        <r:Version><?= $version?></r:Version>
                                     </r:Module>
                                     <r:Scheme>
                                         <r:ID>ZA<?= $project->ZA_Studiennummer ?>_LogPro</r:ID>
                                         <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                                        <r:Version>1.0.0</r:Version>
+                                        <r:Version><?= $version?></r:Version>
                                     </r:Scheme>
                                     <r:ID>ZA<?= $project->ZA_Studiennummer ?>_LogRec</r:ID>
                                     <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                                    <r:Version>1.0.0</r:Version>
+                                    <r:Version><?= $version?></r:Version>
                                 </n1:MeasureReference>
                                 <n1:PhysicalTableLocation>
                                     <n1:Column>0</n1:Column>
@@ -291,19 +293,19 @@
                 <r:Module>
                     <r:ID>ZA<?= $project->ZA_Studiennummer ?>_PhyDatPro</r:ID>
                     <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                    <r:Version>1.0.0</r:Version>
+                    <r:Version><?= $version?></r:Version>
                 </r:Module>
                 <r:Scheme>
                     <r:ID>ZA<?= $project->ZA_Studiennummer ?>_RecLaySch</r:ID>
                     <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                    <r:Version>1.0.0</r:Version>
+                    <r:Version><?= $version?></r:Version>
                 </r:Scheme>
                 <r:ID>ZA<?= $project->ZA_Studiennummer ?>_RecLay</r:ID>
                 <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                <r:Version>1.0.0</r:Version>
+                <r:Version><?= $version?></r:Version>
             </pi:RecordLayoutReference>
             <pi:DataFileIdentification id="ZA<?= $project->ZA_Studiennummer ?>_DatFilIde">
-                <pi:URI isPublic="true">doi:10.4232/1.8137</pi:URI>
+                <pi:URI isPublic="true">doi:10.4232/1.<?= $project->ZA_Studiennummer ?></pi:URI>
             </pi:DataFileIdentification>
             <pi:GrossFileStructure id="ZA<?= $project->ZA_Studiennummer ?>_GroFilStr">
                 <pi:CaseQuantity>0</pi:CaseQuantity>
@@ -315,23 +317,23 @@
                     <r:Module>
                         <r:ID>ZA<?= $project->ZA_Studiennummer ?>_Arc</r:ID>
                         <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                        <r:Version>1.0.0</r:Version>
+                        <r:Version><?= $version?></r:Version>
                     </r:Module>
                     <r:Scheme>
                         <r:ID>ZA<?= $project->ZA_Studiennummer ?>_OrgSch</r:ID>
                         <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                        <r:Version>1.0.0</r:Version>
+                        <r:Version><?= $version?></r:Version>
                     </r:Scheme>
                     <r:ID>ZA<?= $project->ZA_Studiennummer ?>_Org_AR</r:ID>
                     <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                    <r:Version>1.0.0</r:Version>
+                    <r:Version><?= $version?></r:Version>
                 </a:ArchiveOrganizationReference>
                 <a:Item>
                     <a:CallNumber>ZA<?= $project->ZA_Studiennummer ?></a:CallNumber>
                     <a:Access id="ZA<?= $project->ZA_Studiennummer ?>_Acc">
                         <a:AccessTypeName>A</a:AccessTypeName>
                         <r:Description>Daten und Dokumente sind für die akademische Forschung und Lehre freigegeben.</r:Description>
-                        <a:CitationRequirement>doi:10.4232/1.8137</a:CitationRequirement>
+                        <a:CitationRequirement>doi:10.4232/1.<?= $project->ZA_Studiennummer ?></a:CitationRequirement>
                         <a:AccessConditions>Daten und Dokumente sind für die akademische Forschung und Lehre freigegeben.</a:AccessConditions>
                     </a:Access>
                 </a:Item>
@@ -357,16 +359,16 @@
                         <r:Module>
                             <r:ID>ZA<?= $project->ZA_Studiennummer ?>_Arc</r:ID>
                             <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                            <r:Version>1.0.0</r:Version>
+                            <r:Version><?= $version?></r:Version>
                         </r:Module>
                         <r:Scheme>
                             <r:ID>ZA<?= $project->ZA_Studiennummer ?>_OrgSch</r:ID>
                             <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                            <r:Version>1.0.0</r:Version>
+                            <r:Version><?= $version?></r:Version>
                         </r:Scheme>
                         <r:ID>ZA<?= $project->ZA_Studiennummer ?>_Org_AR</r:ID>
                         <r:IdentifyingAgency>de.gesis</r:IdentifyingAgency>
-                        <r:Version>1.0.0</r:Version>
+                        <r:Version><?= $version?></r:Version>
                     </r:AgencyOrganizationReference>
                     <r:Description>Histat 2.0 nach DDI 3.1 Export</r:Description>
                 </r:LifecycleEvent>
