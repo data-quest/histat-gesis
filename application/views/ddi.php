@@ -27,7 +27,7 @@ $version = $version_raw[count($version_raw)-1];
             <r:Publisher>GESIS - Leibniz Institut für Sozialwissenschaften</r:Publisher>
 
             <r:Contributor role="Distributor">GESIS - Leibniz Institut für Sozialwissenschaften</r:Contributor>
-            <r:InternationalIdentifier type="DOI">doi:10.4232/1.8137</r:InternationalIdentifier>
+            <r:InternationalIdentifier type="DOI">doi:10.4232/1.<?= $project->ZA_Studiennummer ?></r:InternationalIdentifier>
             <dce:DCElements>
                 <dc2:title><?= $project->Projektname ?>
                 </dc2:title>
