@@ -104,7 +104,8 @@ class Controller_Project extends Controller_Data {
         if ($project->loaded()) {
             $view = View::factory('ddi');
             $view->project = $project;
-            $this->response->body('<?xml version="1.0" encoding="UTF-8" standalone="no" ?>'.$view->render())->send_file(TRUE, $project->Projektname.'.xml');
+            
+            $this->response->body($view->render())->send_file(TRUE, $project->Projektname.'.xml');
         }
     }
 

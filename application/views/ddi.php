@@ -2,6 +2,7 @@
 $version_raw = explode(" ", $project->Bemerkungen);
 $version = $version_raw[count($version_raw) - 1];
 ?>
+<?= '<?xml version="1.0" encoding="UTF-8" standalone="no" ?>'; ?>
 <!--                                            -->
 <!-- The original DDI 3.1 Schema can be found at http://www.ddialliance.org/DDI/schema/ddi3.1/ -->
 <!--                                         -->
@@ -30,7 +31,7 @@ $version = $version_raw[count($version_raw) - 1];
             <r:Contributor role="Distributor">GESIS - Leibniz Institut für Sozialwissenschaften</r:Contributor>
             <r:PublicationDate> 
                 <r:SimpleDate><?= $project->Publikationsjahr ?></r:SimpleDate>
-            </r:PublicationDate
+            </r:PublicationDate>
             <r:InternationalIdentifier type="DOI">doi:10.4232/1.<?= $project->ZA_Studiennummer ?></r:InternationalIdentifier>
             <dce:DCElements>
                 <dc2:title><?= $project->Projektname ?>
