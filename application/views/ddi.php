@@ -1,7 +1,6 @@
 <?php
 $version_raw = explode(" ", $project->Bemerkungen);
 $version = $version_raw[count($version_raw) - 1];
-ob_end_clean();
 ?>
 <?= '<?xml version="1.0" encoding="UTF-8" standalone="no" ?>'."\n"?>
 <!--                                            -->

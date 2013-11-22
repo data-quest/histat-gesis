@@ -106,7 +106,7 @@ class Controller_Project extends Controller_Data {
             $view->project = $project;
             
             $this->response->body($view->render());
-                    
+            ob_end_clean();
           $this->response->send_file(TRUE, $project->Projektname.'.xml');
         }
     }
