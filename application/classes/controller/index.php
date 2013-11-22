@@ -87,6 +87,7 @@ class Controller_Index extends Controller_Template {
     public function before() {
         //Setup layout
         $this->template = 'index';
+        ob_end_clean();
         parent::before();
         //Load Config
         $this->config = Kohana::$config->load('config');
