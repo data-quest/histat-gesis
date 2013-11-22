@@ -1,9 +1,9 @@
 <?php
 $version_raw = explode(" ", $project->Bemerkungen);
 $version = $version_raw[count($version_raw) - 1];
-ob_clean();
+ob_end_clean();
 ?>
-<?= '<?xml version="1.0" encoding="UTF-8" standalone="no" ?>'?>
+<?= '<?xml version="1.0" encoding="UTF-8" standalone="no" ?>'."\n"?>
 <!--                                            -->
 <!-- The original DDI 3.1 Schema can be found at http://www.ddialliance.org/DDI/schema/ddi3.1/ -->
 <!--                                         -->
