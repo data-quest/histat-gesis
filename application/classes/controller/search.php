@@ -65,7 +65,7 @@ class Controller_Search extends Controller_Data {
     public function action_detailed() {
         $this->auto_render = false;
         if (HTTP_Request::POST == $this->request->method()) {
-            echo json_encode(ORM::factory('project')->search($this->request->post()));
+            $this->response->body(json_encode(ORM::factory('project')->search($this->request->post())));
         }
     }
 
